@@ -1,0 +1,44 @@
+.canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 5px solid black;
+}
+
+.leftCanvas {
+    position: fixed;
+    top: 1;
+    left: 0%;
+    width: 50vw;
+    height: 99vh;
+    border: 5px solid red;
+}
+
+.rightCanvas {
+    position: fixed;
+    top: 1;
+    right: 0%;
+    width: 50vw;
+    height: 99vh;
+    border: 5px solid red;
+}
+
+img {
+    width: 100px;
+    height: 150px;
+}
+
+.waldo {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.specialWaldo {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
