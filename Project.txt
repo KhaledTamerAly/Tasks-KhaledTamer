@@ -1,0 +1,18 @@
+[done] 1. Login Screen
+	[done] a. login using email and password
+	[done] b. check/display validation of email
+	[done] c. check if user exists in file
+	[done] d. Gaurd: must be logged in to see next screens
+[done] 2. Catalog Screen
+	[done] a. display list of movies
+	[done] b. card clickable to next screen
+[done] 3. Movie Detail Screen
+	[done] a. dsiplay movie details
+
+[done] 4. Router Navigation between screens
+[done] 5. Frontend unit tests to catalog screen
+
+6. Styling for pages
+7. Localization: dsiplay in Arabic
+8. Sign up
+[done] 9. Stay logged in when refreshed in browser

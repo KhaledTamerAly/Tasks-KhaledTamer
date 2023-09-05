@@ -48,6 +48,9 @@ html {
     }
     body {
         font-style: normal;
+        min-width: 768px !important;
+        min-height: 600px;
+        overflow-x: scroll;
     }
     .btn-primary {
         background-color: brown;
