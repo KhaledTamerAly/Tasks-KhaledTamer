@@ -12,6 +12,8 @@ public class RentalSystem
         this.totalRevnue = 0;
     }
 
+    //Not needed to create 3 different methods
+    //Just trying method overloading
     public void addVehicle(String registrationNumber, String brand, int year, String fuelType)
     {
         Vehicle vehicle = new Car(registrationNumber, brand, year, fuelType);

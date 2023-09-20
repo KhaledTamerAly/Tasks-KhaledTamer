@@ -4,9 +4,9 @@ public class Main
     {
         RentalSystem rentalSystem = new RentalSystem();
 
-        rentalSystem.addVehicle("1000", "Audi", 2001, "Diesel");
-        rentalSystem.addVehicle("100", "Harley", 2002, 1000);
-        rentalSystem.addVehicle("10", "Bike", 2003);
+        rentalSystem.addVehicle("1000", "A", 2001, "Diesel");
+        rentalSystem.addVehicle("100", "B", 2002, 1000);
+        rentalSystem.addVehicle("10", "C", 2003);
 
         System.out.println("Before any renting");
 
