@@ -25,7 +25,7 @@ public class User
     public void addAccount(String type, String id) throws AccountAlreadyExistsException {
         for(Account account: this.getAccounts())
         {
-            if(account.getAccountID().equals(id+this.id))
+            if(account.getAccountID().equals(id))
                 throw new AccountAlreadyExistsException();
         }
         this.accounts.add(new Account(type, id, this.id));
@@ -33,7 +33,7 @@ public class User
     public void deposit(String accountID, int amount) throws WrongAccountException {
         for(Account account: this.getAccounts())
         {
-            if(account.getAccountID().equals(accountID+this.id))
+            if(account.getAccountID().equals(accountID))
             {
                 account.setBalance(account.getBalance()+amount);
                 return;
@@ -44,7 +44,7 @@ public class User
     public void withdraw(String accountID, int amount) throws InsufficientFundsException, WrongAccountException {
         for(Account account: this.getAccounts())
         {
-            if(account.getAccountID().equals(accountID+this.id))
+            if(account.getAccountID().equals(accountID))
             {
                 if(account.getBalance()< amount)
                     throw new InsufficientFundsException();

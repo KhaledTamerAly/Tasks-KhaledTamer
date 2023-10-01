@@ -10,7 +10,7 @@ public class Account
     public Account(String type, String accountID, String ownerID)
     {
         this.type = type;
-        this.accountID = accountID + ownerID;
+        this.accountID = accountID;
         this.ownerID = ownerID;
         this.balance = 0;
     }

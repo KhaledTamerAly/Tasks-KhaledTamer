@@ -76,6 +76,7 @@ public class LoginSignUp
         System.out.println("Add account? Press 2");
         System.out.println("Withdraw from account? Press 3");
         System.out.println("Deposit from account? Press 4");
+        System.out.println("Sign out? Press 5");
         Scanner sc= new Scanner(System.in);
         String str = sc.nextLine();
         if (str.equals("1"))
@@ -97,6 +98,15 @@ public class LoginSignUp
 
             for(User user: this.users)
             {
+                for(Account account: user.getAccounts())
+                {
+                    if(account.getAccountID().equals(str2) && !account.getOwnerID().equals(user.getId()))
+                        throw new WrongAccountException();
+                }
+            }
+
+            for(User user: this.users)
+            {
                 if(user.getEmail().equals(email))
                 {
                     user.withdraw(str1, Integer.parseInt(str2));
@@ -114,6 +124,15 @@ public class LoginSignUp
 
             for(User user: this.users)
             {
+                for(Account account: user.getAccounts())
+                {
+                    if(account.getAccountID().equals(str2) && !account.getOwnerID().equals(user.getId()))
+                        throw new WrongAccountException();
+                }
+            }
+
+            for(User user: this.users)
+            {
                 if(user.getEmail().equals(email))
                 {
                     user.deposit(str1, Integer.parseInt(str2));
@@ -121,6 +140,8 @@ public class LoginSignUp
             }
             this.homepage(email, password);
         }
+        else if(str.equals("5"))
+            this.start();
         else
             this.login(email, password);
     }
@@ -134,6 +155,15 @@ public class LoginSignUp
             str = "Savings";
         System.out.println("Enter id: ");
         String str2 = sc.nextLine();
+
+        for(User user: this.users)
+        {
+            for(Account account: user.getAccounts())
+            {
+                if(account.getAccountID().equals(str2))
+                    throw new AccountAlreadyExistsException();
+            }
+        }
 
         for(User user: this.users)
         {
