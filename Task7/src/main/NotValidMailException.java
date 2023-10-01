@@ -1,3 +1,5 @@
+package main;
+
 public class NotValidMailException extends Exception{
 
     public NotValidMailException()

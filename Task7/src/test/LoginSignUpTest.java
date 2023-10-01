@@ -1,9 +1,12 @@
+package test;
+
+import main.LoginSignUp;
+import main.NotValidMailException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class LoginSignUpTest {
-
     @Test
     void login() throws NotValidMailException {
         LoginSignUp loginSignUp = new LoginSignUp();
