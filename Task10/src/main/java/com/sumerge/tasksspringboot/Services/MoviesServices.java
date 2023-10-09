@@ -14,11 +14,11 @@ public class MoviesServices
 
     @Autowired
     @Qualifier("staticBobList")
-    StaticMovieService staticBobMovieService;
+    public StaticMovieService staticBobMovieService;
 
     @Autowired
     @Qualifier("staticAliceList")
-    StaticMovieService staticAliceMovieService;
+    public StaticMovieService staticAliceMovieService;
 
     ArrayList<Movie> movies = new ArrayList<Movie>(Arrays.asList(
             new Movie("MOV1", 1.5,5),

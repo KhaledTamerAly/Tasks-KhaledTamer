@@ -19,6 +19,11 @@ public class MovieController
     {
         return moviesServices.getMovies();
     }
+    @GetMapping(value = "/get-bob")
+    public ArrayList<Movie> getBob()
+    {
+        return moviesServices.staticBobMovieService.MovieList();
+    }
 
     @PostMapping(value = "/add-movie")
     public void addMovie(@RequestBody Movie movie)
